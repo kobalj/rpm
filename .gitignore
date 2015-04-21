@@ -1,0 +1,5 @@
+*.tar*
+BUILDROOT
+BUILD
+RPMS
+SRPMS
