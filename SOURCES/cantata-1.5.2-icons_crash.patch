@@ -1,0 +1,40 @@
+--- cantata-1.5.2/support/icon.h.icons_crash	2015-05-20 23:39:49.933211830 +0200
++++ cantata-1.5.2/support/icon.h	2015-05-20 23:44:51.867528883 +0200
+@@ -54,7 +54,7 @@ public:
+     static void init(QToolButton *btn, bool setFlat=true);
+     #ifdef ENABLE_KDE_SUPPORT
+     static Icon getMediaIcon(const QString &name) { return Icon(name); }
+-    static QString currentTheme() { return KIconLoader::global()->theme()->name(); }
++    static QString currentTheme() { return (KIconLoader::global()->theme() ? KIconLoader::global()->theme()->name() : QString()); }    
+     #else
+     static Icon getMediaIcon(const QString &name);
+     static QString currentTheme() { return QIcon::themeName(); }
+--- cantata-1.5.2/widgets/icons.cpp.icons_crash	2015-05-20 23:47:32.359720546 +0200
++++ cantata-1.5.2/widgets/icons.cpp	2015-05-20 23:50:31.217814666 +0200
+@@ -375,7 +375,7 @@ Icons::Icons()
+     #endif
+ 
+     #ifdef ENABLE_STREAMS
+-    streamCategoryIcon=Icon(QLatin1String("oxygen")==Icon::currentTheme().toLower() ? "inode-directory" : "folder-music");
++    streamCategoryIcon=Icon(QString::compare(QLatin1String("oxygen"),Icon::currentTheme(), Qt::CaseInsensitive)==0 ? "inode-directory" : "folder-music");    
+     #endif
+ 
+     QString iconFile=QString(CANTATA_SYS_ICONS_DIR+"stream.png");
+@@ -586,7 +586,7 @@ void Icons::initToolbarIcons(const QColo
+             toolbarMenuIcon=createMenuIcon(toolbarText);
+         }
+         #endif
+-        if (QLatin1String("gnome")==Icon::currentTheme().toLower()) {
++        if (QString::compare(QLatin1String("gnome"),Icon::currentTheme(), Qt::CaseInsensitive)==0) {        
+             QColor col=QApplication::palette().color(QPalette::Active, QPalette::WindowText);
+             infoIcon=loadSidebarIcon("info", col, col);
+         }
+@@ -597,7 +597,7 @@ void Icons::initToolbarIcons(const QColo
+     }
+ 
+     #if !defined ENABLE_KDE_SUPPORT && !defined Q_OS_WIN
+-    if (QLatin1String("gnome")==Icon::currentTheme().toLower()) {
++    if (QString::compare(QLatin1String("gnome"),Icon::currentTheme(), Qt::CaseInsensitive)==0) {
+         QColor col=QApplication::palette().color(QPalette::Active, QPalette::WindowText);
+         contextIcon=loadSidebarIcon("info", col, col);
+     } else

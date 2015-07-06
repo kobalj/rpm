@@ -1,0 +1,13 @@
+--- cantata-1.5.2/CMakeLists.txt.system-qtiocompressor	2015-03-23 21:09:38.000000000 +0100
++++ cantata-1.5.2/CMakeLists.txt	2015-05-20 21:49:26.110599174 +0200
+@@ -805,8 +805,8 @@ if (NOT ENABLE_UBUNTU)
+ endif (NOT ENABLE_UBUNTU)
+ 
+ add_subdirectory(support)
+-add_subdirectory(3rdparty/qtiocompressor)
+-target_link_libraries(cantata support-core qtiocompressor ${CANTATA_LIBS} ${QTLIBS} ${ZLIB_LIBRARIES})
++#add_subdirectory(3rdparty/qtiocompressor)
++target_link_libraries(cantata support-core QtSolutions_IOCompressor-2.3 ${CANTATA_LIBS} ${QTLIBS} ${ZLIB_LIBRARIES})
+ 
+ # enable warnings
+ add_definitions(-DQT_NO_DEBUG_OUTPUT)

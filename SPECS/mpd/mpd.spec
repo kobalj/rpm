@@ -16,7 +16,7 @@
 
 Name:           mpd
 Epoch:          1
-Version:        0.19.9
+Version:        0.19.10
 Release:        1%{?dist}
 Summary:        The Music Player Daemon
 License:        GPLv2+
