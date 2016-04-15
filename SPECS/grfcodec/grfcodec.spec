@@ -56,6 +56,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Apr 15 2016 Jure Kobal <kobal j AT gmail DOT com> - 6.0.5-5
+- Rebuild for Centos7
+
 * Thu Aug 27 2015 Jonathan Wakely <jwakely@redhat.com> - 6.0.5-5
 - Rebuilt for Boost 1.59
 

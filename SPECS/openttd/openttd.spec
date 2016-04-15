@@ -2,7 +2,7 @@
 #%%global prever RC1
 
 Name:           openttd
-Version:        1.5.3
+Version:        1.6.0
 Release:        1%{?prever}%{?dist}
 Summary:        Transport system simulation game
 
@@ -145,6 +145,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Fri Apr 15 2016 Jure Kobal <kobal j AT gmail DOT com> - 1.5.3-01
+- Rebuild for Centos7
+
 * Sat Jan 02 2016 Felix Kaechele <heffer@fedoraproject.org> - 1.5.3-1
 - update to 1.5.3
 

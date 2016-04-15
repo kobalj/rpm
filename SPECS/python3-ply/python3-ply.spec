@@ -116,6 +116,9 @@ rm -rf $RPM_BUILD_ROOT
 %endif # with_python3
 
 %changelog
+* Fri Apr 15 2016 Jure Kobal <kobal j AT gmail DOT com> - 1.5.3-01
+- Rebuild for Centos7
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3.4-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 

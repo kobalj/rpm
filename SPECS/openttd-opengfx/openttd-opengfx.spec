@@ -51,6 +51,9 @@ make check
 
 
 %changelog
+* Fri Apr 15 2016 Jure Kobal <kobal j AT gmail DOT com> - 0.5.3-1
+- Rebuild for Centos7
+
 * Sun Oct 25 2015 Felix Kaechele <heffer@fedoraproject.org> - 0.5.3-1
 - update to 0.5.3
 

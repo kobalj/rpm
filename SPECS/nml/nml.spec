@@ -41,6 +41,9 @@ rm docs/nmlc.1.gz
 
 
 %changelog
+* Fri Apr 15 2016 Jure Kobal <kobal j AT gmail DOT com> - 0.4.2-3
+- Rebuild for Centos7
+
 * Tue Nov 10 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.4.2-3
 - Rebuilt for https://fedoraproject.org/wiki/Changes/python3.5
 
