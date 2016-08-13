@@ -15,7 +15,7 @@
 %global  mpd_statefile       %{mpd_homedir}/mpdstate
 
 Name:           mpd
-Version:        0.19.14
+Version:        0.19.18
 Release:        1%{?dist}
 Summary:        The Music Player Daemon
 License:        GPLv2+
@@ -181,6 +181,12 @@ fi
 
 
 %changelog
+* Sat Aug 13 2016 Jure Kobal <kobalj AT gmail DOT com> - 0:0.19.18-1
+- Updated to upstream releas 0.19.18
+
+* Mon Jun 27 2016 Jure Kobal <kobalj AT gmail DOT com> - 0:0.19.16-1
+- Updated to upstream releas 0.19.16
+
 * Mon Mar 28 2016 Jure Kobal <kobalj AT gmail DOT com> - 0:0.19.14-1
 - Updated to upstream releas 0.19.14
 
