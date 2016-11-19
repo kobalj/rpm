@@ -1,5 +1,5 @@
 Name:		libva
-Version:	1.7.1
+Version:	1.7.3
 Release:	1%{?dist}
 Summary:	Video Acceleration (VA) API for Linux
 Group:		System Environment/Libraries
@@ -119,6 +119,9 @@ find %{buildroot} -regex ".*\.la$" | xargs rm -f --
 }
 
 %changelog
+* Fri Nov 18 2016 Jure Kobal <kobalj@gmail.com> - 1.7.3-1
+- Update to 1.7.3
+
 * Mon Jun 27 2016 Jure Kobal <kobalj@gmail.com> - 1.7.1-1
 - Update to 1.7.1
 

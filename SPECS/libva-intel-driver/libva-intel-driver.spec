@@ -1,7 +1,7 @@
 #global _with_gen4asm 1
 
 Name:		libva-intel-driver
-Version:	1.7.1
+Version:	1.7.3
 Release:	1%{?dist}
 Summary:	HW video decode support for Intel integrated graphics
 Group:		System Environment/Libraries
@@ -19,7 +19,7 @@ BuildRequires:	libXext-devel
 BuildRequires:	libXfixes-devel
 BuildRequires:	libdrm-devel >= 2.4.23
 BuildRequires:	libpciaccess-devel
-BuildRequires:	libva-devel >= 1.0.16
+BuildRequires:	libva-devel >= 1.7.3
 BuildRequires:	mesa-libGL-devel
 
 #Introduced in F-17
@@ -66,6 +66,9 @@ gendiff . .prebuilt
 
 
 %changelog
+* Fri Nov 18 2016 Jure Kobal <kobalj@gmail.com> - 1.7.3-1
+- Update to 1.7.3
+
 * Mon Jun 27 2016 Jure Kobal <kobalj@gmail.com> - 1.7.1-1
 - Update to 1.7.1
 
